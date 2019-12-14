@@ -1,0 +1,21 @@
+
+<%- include ("../partials/header") %>
+
+<div class="container">
+	<div class="row">
+			<h1 class="text-center">Edit</h1>
+			<div style="width: 30%; margin: 30px auto">
+				<form action="/motoretro/<%= campground_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+					<div class="form-group">
+						<textarea class="form-control"  name="comment[text]" placeholder="comment"><%= comment.text%></textarea>
+					</div>
+
+					<button class="btn btn-lg btn-primary btn-block">Submit!</button>
+				</form>
+				<a href="/motoretro">Back to home page</a>
+			</div>
+			
+	</div>
+</div>			
+			
+<%- include ("../partials/footer") %>

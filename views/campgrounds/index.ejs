@@ -1,0 +1,38 @@
+<%- include ("../partials/header") %>
+	   	
+
+	<div class="container">
+		<header class="jumbotron">
+			<div class="container">
+				<h1>Welcome to MotoRETRO</h1>
+			<p>Welcome to our page, you'll find here a huge community of retro car lovers</p>
+			<p>
+				<a class="btn btn-success btn-lg" href="/motoretro/new"><i class="fa fa-plus"></i> Add a New Post </a>
+			</p>
+			</div>
+			
+			
+		</header>
+		
+<div class="row text-center" style="display:flex; flex-wrap:wrap;">
+	<% campgrounds.forEach(function(campground){ %>
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail">
+			 <img src="<%= campground.image %>">
+			<div class="caption">
+				<h4>
+					<%= campground.name %> </h4>
+				</h4>
+				</div>
+				<p>
+					<a href="/motoretro/<%= campground._id %>" class="btn btn-primary"><i class="fa fa-info"></i>  More info</a>
+				</p>
+			</div>			
+		</div>
+	<% }); %>
+	</div>
+</div>
+
+
+
+<%- include ("../partials/footer") %>

@@ -1,0 +1,29 @@
+
+<%- include ("../partials/header") %>
+
+<div class="container">
+	<div class="row">
+			<h1 class="text-center">Edit <%= campground.name %> </h1>
+			<div style="width: 30%; margin: 30px auto">
+				<form action="/motoretro/<%= campground._id %>?_method=PUT" method="POST">
+					<div class="form-group">
+						<input class="form-control" type="text" name="campground[name]" value="<%= campground.name %>">	
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="number" name="campground[price]" value="<%= campground.year %>" placeholder="Year of production">	
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" name="campground[image]" value= "<%=campground.image %>">
+					</div>
+					<div class="form-group">
+						<textarea class="form-control descriere"  name="description" placeholder="description"><%= campground.description %></textarea>
+					</div>
+					
+					<button class="btn btn-lg btn-primary btn-block">Submit!</button>
+				</form>
+				<a href="/motoretro">Back to home page</a>
+			</div>
+	</div>
+</div>			
+			
+<%- include ("../partials/footer") %>
