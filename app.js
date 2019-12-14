@@ -55,9 +55,7 @@ app.use("/motoretro/:id/comments", commentRoutes);
 app.use("/motoretro", campgroundRoutes);
 app.use("/", indexRoutes);
 
-app.listen(3000, function(){
-	console.log("The YelpCamp server has started");
-});
+app.listen(process.env.PORT, process.env.IP);
 
 
 
